@@ -3,7 +3,7 @@ package com.difeng.lifegame;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 /**
- * 
+ * 配置参数类
  * @author difeng
  *
  */

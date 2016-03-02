@@ -9,6 +9,8 @@ import java.util.List;
 import javax.swing.JPanel;
 /**
  * 
+ * 封装生命游戏的算法并负责绘制图案
+ * 
  * @author difeng
  *
  */
@@ -46,7 +48,9 @@ public class Canvas extends JPanel implements Runnable{
     };
     
 	public Canvas(){
+		//设置棋盘的背景色
 		setBackground(Color.black);
+		//初始化棋盘上已经放置的细胞
 		init();
 	}
 	
@@ -76,6 +80,9 @@ public class Canvas extends JPanel implements Runnable{
 			}
 		}
 	}
+    /**
+     * 棋盘上的所有细胞开始繁衍进化
+     */
 	public void evolution(){
 		//清空中间计算的列表
 		bornCellList.clear();
@@ -102,6 +109,8 @@ public class Canvas extends JPanel implements Runnable{
 		//将新生成的细胞加入到活着的细胞列表中
 		cellList.addAll(bornCellList);
 	}
+	
+	
 	@Override
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -156,7 +165,7 @@ public class Canvas extends JPanel implements Runnable{
 	
 	/**
 	 * 计算一个细胞周围有多少个存活的细胞
-	 * @param row
+	 * @param row 
 	 * @param col
 	 * @return
 	 * 
@@ -187,6 +196,7 @@ public class Canvas extends JPanel implements Runnable{
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+			//开始下一代繁衍
 			evolution();
 		}
 	}

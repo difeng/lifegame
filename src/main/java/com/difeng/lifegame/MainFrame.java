@@ -7,7 +7,7 @@ import java.awt.event.KeyEvent;
 
 import javax.swing.JFrame;
 /**
- * 
+ * 程序入口类
  * @author difeng
  *
  */

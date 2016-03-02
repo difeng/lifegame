@@ -1,6 +1,7 @@
 package com.difeng.lifegame;
 /**
  * 
+ * 细胞类
  * @author difeng
  *
  */

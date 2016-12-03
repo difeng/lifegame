@@ -18,7 +18,7 @@ Constant.java    常量类
 MainFrame.java   主控程序
 
 算法思路：
-用三个链表，cellList(活着的细胞)，bornCellList(刚出生的细胞)，deadCellList（死去得细胞），遍历cellList，对每个细胞按规则进行繁衍，繁衍一代后，处理cellList，从中去掉deadCellList，加入bornCellList。在如此可完成一轮的繁衍，其中还要用到一个二维数组flagArr来保存细胞状态。
+用三个链表，cellList(活着的细胞)，bornCellList(刚出生的细胞)，deadCellList（死去的细胞），遍历cellList，对每个细胞按规则进行繁衍，繁衍一代后，处理cellList，从中去掉deadCellList，加入bornCellList。在如此可完成一轮的繁衍，其中还要用到一个二维数组flagArr来保存细胞状态。
 二维数组表示细胞的状态
 //取值为1 和 2   1:当代存活的细胞      2:刚产生的下一代细胞
 int [][] flagArr;
